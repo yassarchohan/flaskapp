@@ -19,6 +19,7 @@ def getastronautinfo():
 def fetchdata():
     first_name = request.form['first_name']
 
+
     if first_name:
         allnames = Azuredemo.searchemp(first_name)
     else:
