@@ -2,9 +2,9 @@ import mysql.connector
 
 def getMysqlData(name):
     myconnection = mysql.connector.connect(
-        host='localhost',
-        user='',
-        password='',
+        host='mytestingmysqlserver.mysql.database.azure.com',
+        user='chohan47@mytestingmysqlserver',
+        password='Chohan443',
         database='test'
     )
     cursor = myconnection.cursor()
