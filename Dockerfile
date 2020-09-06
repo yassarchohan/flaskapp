@@ -1,12 +1,10 @@
 FROM ubuntu:18.04
 
-RUN apt-get update -y && apt-get install -y python-pip python-dev
+RUN apt-get update -y && apt-get install -y python3.8 && apt-get install -y python3-pip
 
 WORKDIR /app/getemp
 ADD . /app/getemp
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-EXPOSE 80
-
-ENTRYPOINT ["python", "GetEmp.py"]
+ENTRYPOINT ["python3.8", "GetEmp.py"]
